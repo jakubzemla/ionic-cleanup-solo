@@ -1,0 +1,12 @@
+.rotate-icon {
+    transform: rotate(180deg)
+}
+
+.cleaner-user {
+    --background: #FFFFCC;
+}
+
+
+.cleaner-user-card {
+    --background: #FFFFEE;
+}

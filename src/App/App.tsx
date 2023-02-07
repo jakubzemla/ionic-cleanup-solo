@@ -1,8 +1,12 @@
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
-import Menu from './components/Menu';
-import Page from './pages/Page';
+import Menu from '../components/menu/Menu';
+import CustomerLogin from '../components/customer/Login/CustomerLogin';
+import CustomerDashboard from '../components/customer/CustomerDashboard';
+import CleanerLogin from '../components/cleaner/Login/CleanerLogin';
+import CleanerDashboard from '../components/cleaner/CleanerDashboard';
+import Logout from '../components/logout/Logout'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -21,7 +25,8 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './theme/variables.css';
+import '../styles/variables.css';
+import "../styles/styles.css"
 
 setupIonicReact();
 
@@ -33,10 +38,22 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
+              <Redirect to="/customer/login" />
             </Route>
-            <Route path="/page/:name" exact={true}>
-              <Page />
+            <Route path="/customer/login" exact={true}>
+              <CustomerLogin />
+            </Route>
+            <Route path="/cleaner/login" exact={true}>
+              <CleanerLogin />
+            </Route>
+            <Route path="/customer/dashboard" exact={true}>
+              <CustomerDashboard />
+            </Route>
+            <Route path="/cleaner/dashboard" exact={true}>
+              <CleanerDashboard />
+            </Route>
+            <Route path="/logout" exact={true}>
+              <Logout />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
