@@ -1,4 +1,4 @@
-import { IonContent, IonButton } from "@ionic/react"
+import { IonContent, IonButton, IonPage } from "@ionic/react"
 import { useHistory } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const CleanerLogin = () => {
         history.push("/cleaner/dashboard")
     }
     
-    return(<>
+    return(<IonPage>
         <IonContent className="cleaner-user">
             <div className="login-wrapper">
                 <h3 className="template-title">Prihlásenie upratovača</h3>
@@ -18,7 +18,7 @@ const CleanerLogin = () => {
             </div>
             
         </IonContent>
-    </>
+    </IonPage>
     )
 }
 

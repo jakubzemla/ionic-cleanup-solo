@@ -1,5 +1,5 @@
 import './CustomerLogin.css'
-import { IonContent, IonButton } from "@ionic/react"
+import { IonContent, IonButton, IonPage } from "@ionic/react"
 import { useHistory } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const CustomerLogin = () => {
     const handleHistory = () => {
         history.push("/customer/dashboard")
     }
-    return(<>
+    return(<IonPage>
         <IonContent >
             <div className="login-wrapper">
                 <h2 className="company-title">GOLDLUX</h2>
@@ -18,7 +18,7 @@ const CustomerLogin = () => {
                 <Link className="switch-user-position" to="/cleaner/login">Upratovač</Link>
             </div>
         </IonContent>
-    </>
+    </IonPage>
     )
 }
 

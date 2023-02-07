@@ -1,4 +1,4 @@
-import { IonCard, IonCardHeader, IonCardTitle, IonCardContent } from "@ionic/react"
+import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonPage } from "@ionic/react"
 import { useHistory } from 'react-router-dom'
 import { useIonViewDidEnter } from '@ionic/react'
 
@@ -10,7 +10,7 @@ const Logout = () => {
     })
     
 
-    return(
+    return(<IonPage>
         <IonCard>
             <IonCardHeader>
                 <IonCardTitle>Odhlásenie užívateľa</IonCardTitle>
@@ -18,7 +18,8 @@ const Logout = () => {
             <IonCardContent>
                 <p>Prebieha odhlasovanie užívateľa</p>
             </IonCardContent>
-        </IonCard> 
+        </IonCard>
+    </IonPage> 
     )
 }
 
