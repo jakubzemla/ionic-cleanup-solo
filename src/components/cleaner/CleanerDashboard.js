@@ -1,5 +1,5 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/react'
-import CustomerOrders from '../customer/Orders/CustomerOrders'
+import CleanerOrders from './Orders/CleanerOrders'
 
 const CleanerDashboard = () => {
     return(
@@ -10,7 +10,7 @@ const CleanerDashboard = () => {
             </IonToolbar>
         </IonHeader>
         <IonContent className="cleaner-user">
-            <CustomerOrders />
+            <CleanerOrders />
         </IonContent>
     </IonPage> 
     )

@@ -1,12 +1,14 @@
-import './Order.css'
-import { IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle } from '@ionic/react'
+import { IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton } from '@ionic/react'
 
 const Order = (props) => {
     return(
-        <IonCard>
+        <IonCard className="cleaner-user-card">
             <IonCardHeader>
                 <IonCardTitle className="order-title">Objednávka {props.id}</IonCardTitle>
                 <IonCardSubtitle>Stav: {props.status}</IonCardSubtitle>
+                {props.status === "planned" && <IonButton color="success">Štart upratovania</IonButton>}
+                {props.status === "planned" && <IonButton color="dark" size="small">Zrušiť</IonButton>}
+                {props.status === "ended" && <IonButton color="warning">Nastaviť plánovaná</IonButton>}
             </IonCardHeader>
             <IonCardContent>
                 <p>Dátum: {props.date}</p>
