@@ -1,0 +1,7 @@
+{
+  "name": "rs-cleanup-solo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
